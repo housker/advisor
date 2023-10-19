@@ -5,6 +5,31 @@
     "pg": "^8.11.3"
   },
   "devDependencies": {
-    "@types/node": "^20.8.7"
-  }
+    "@types/node": "^20.8.7",
+    "@types/pg": "^8.10.7",
+    "ts-loader": "^9.5.0",
+    "typescript": "^5.2.2",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "name": "advisor",
+  "description": "AI financial advisor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "develop": "webpack-dev-server --mode development",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/housker/advisor.git"
+  },
+  "author": "Adelle Housker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/housker/advisor/issues"
+  },
+  "homepage": "https://github.com/housker/advisor#readme"
 }
