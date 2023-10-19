@@ -1,13 +1,15 @@
 import { Pool } from 'pg';
 import { config } from './config';
 
-const pool = new Pool({
-  user: config.user,
-  password: config.password,
-  host: config.host,
-  port: config.port,
-  database: config.database,
-  ssl: config.ssl,
+const { databaseOptions } = config;
+
+export const pool = new Pool({
+  user: databaseOptions.user,
+  password: databaseOptions.password,
+  host: databaseOptions.host,
+  port: databaseOptions.port,
+  database: databaseOptions.database,
+  ssl: databaseOptions.ssl,
 });
 
 module.exports = pool;

@@ -13,6 +13,18 @@ module.exports = {
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
+    fallback: {
+        "assert": false,
+        "dns": false,
+        "net": false,
+        "tls": false,
+        "buffer": false,
+        "fs": false,
+        "path": false,
+        "util": false,
+        "stream": require.resolve("stream-browserify"),
+        "crypto": require.resolve("crypto-browserify")
+    }
   },
   output: {
     filename: 'bundle.js',
